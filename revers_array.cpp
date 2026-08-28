@@ -1,9 +1,55 @@
-//rever the array elements
-#include<iostream>
+// //rever the array elements
+// // linear search method
+// #include<iostream>
+// using namespace std;
+// void reverseArray(int arr[],int sz){
+//     int start=0,end=sz-1;
+
+//     while(start<end){
+//         swap(arr[start],arr[end]);
+//         start++;
+//         end--;
+//     }
+// }
+  
+
+// int main(){
+//     int arr[]={2,4,6,8,1,2,5};
+//     int size=7;
+    
+//     reverseArray(arr, sz);
+//     for (int i=0;i<sz;i++){
+//         cout<<arr[i]<<" ";
+
+//     }
+//     cout<<endl;
+//     return 0;
+// }
+
+
+#include <iostream>
 using namespace std;
-int main(){
-    int a[]={10,20,30,40,50};
-    for (int i=4;i>=0;i--){
-        cout<<a[i]<<" ";
+
+void reverseArray(int arr[], int size) {
+    int start = 0, end = size - 1;
+
+    while (start < end) {
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
     }
+}
+
+int main() {
+    int arr[] = {2, 4, 6, 8, 1, 2, 5};
+    int size = 7;
+
+    reverseArray(arr, size);
+
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+
+    cout << endl;
+    return 0;
 }
